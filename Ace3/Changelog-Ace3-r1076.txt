@@ -1,0 +1,62 @@
+------------------------------------------------------------------------
+r1076 | funkydude | 2013-01-21 14:31:01 +0000 (Mon, 21 Jan 2013) | 1 line
+Changed paths:
+   M /trunk/AceTimer-3.0/AceTimer-3.0.lua
+
+AceTimer-3.0: Add an extra id check in our OnFinished handler to compensate for repeating timers being cancelled and starting new timers before the OnFinished function ends. Also remove a nil check for .args as it being nil was a direct result of the issue we just resolved.
+------------------------------------------------------------------------
+r1075 | nevcairiel | 2013-01-18 15:32:52 +0000 (Fri, 18 Jan 2013) | 1 line
+Changed paths:
+   M /trunk/AceTimer-3.0/AceTimer-3.0.lua
+
+AceTimer-3.0: Update Comments and LuaDoc
+------------------------------------------------------------------------
+r1074 | nevcairiel | 2013-01-18 15:26:42 +0000 (Fri, 18 Jan 2013) | 1 line
+Changed paths:
+   M /trunk/AceTimer-3.0/AceTimer-3.0.lua
+
+AceTimer-3.0: Change how ids are generated to ensure no duplicate ids exist
+------------------------------------------------------------------------
+r1073 | nevcairiel | 2013-01-18 15:24:59 +0000 (Fri, 18 Jan 2013) | 3 lines
+Changed paths:
+   M /trunk/AceTimer-3.0/AceTimer-3.0.lua
+
+AceTimer-3.0: Simplify upgrade path from pre-animation timers.
+
+Keep all compat code in a single upgrade block, and avoid scattering compat code throughout the other functions.
+------------------------------------------------------------------------
+r1072 | nevcairiel | 2013-01-14 21:14:00 +0000 (Mon, 14 Jan 2013) | 1 line
+Changed paths:
+   M /trunk/AceTimer-3.0/AceTimer-3.0.lua
+
+AceTimer-3.0: Trim trailing whitespace
+------------------------------------------------------------------------
+r1071 | nevcairiel | 2013-01-14 20:07:51 +0000 (Mon, 14 Jan 2013) | 1 line
+Changed paths:
+   M /trunk/AceTimer-3.0/AceTimer-3.0.lua
+
+AceTimer-3.0: Check if the timer is still active before processing the OnFinished callback
+------------------------------------------------------------------------
+r1070 | nevcairiel | 2013-01-14 18:13:08 +0000 (Mon, 14 Jan 2013) | 1 line
+Changed paths:
+   M /trunk/AceTimer-3.0/AceTimer-3.0.lua
+
+AceTimer-3.0: Fix CancelAllTimers when using AceTimer without embedding it
+------------------------------------------------------------------------
+r1069 | nevcairiel | 2013-01-13 21:29:23 +0000 (Sun, 13 Jan 2013) | 6 lines
+Changed paths:
+   M /trunk/AceTimer-3.0/AceTimer-3.0.lua
+
+AceTimer-3.0: Complete rewrite based on Animation Timers (as previously seen in LibTimer-1.0 by Funkeh)
+
+The new version is 100% API compatible with the old version, and existing timers will be upgraded during library loading.
+New features:
+- Higher timer resolution (up to 0.01s, up from 0.1s before)
+- Unlimited number of extra arguments for timers (instead of just one)
+------------------------------------------------------------------------
+r1068 | nevcairiel | 2012-12-10 19:54:18 +0000 (Mon, 10 Dec 2012) | 1 line
+Changed paths:
+   M /trunk/Ace3.toc
+
+Update TOC for 5.1
+------------------------------------------------------------------------
