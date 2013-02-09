@@ -35,10 +35,20 @@ function TDL:OnEnable()
 		else 
 			for k,v in pairs(timers) do
 				if timers.done == false then
-					-- Create timer OR undone message
+					-- Create undone message
+					print timers.name .. " is not done yet."
+					
+					-- Create timer
+					
+					
 					-- Register the complete handlers
+					if timers.type == "quest" then
+						-- Create Frame for Event Handler
+							-- Frame will reference function
+					elseif timers.type == "raidboss"
 				else
 					-- Create completed message
+					print timers.name .. " has already been done!"
 				end
 			end
 		end
@@ -52,6 +62,21 @@ function TDL:OnDisable()
 -- You would probably only use an OnDisable if you want to 
 -- build a "standby" mode, or be able to toggle modules on/off.
 end
+
+function listenToQuest() {
+	-- Create XML Frame
+	local frame = CreateFrame()
+	frame:RegisterEvent("QUEST_WATCH_UPDATE")
+	local function eventHandler(self, event, ...)
+		-- Callback
+		onQuestComplete()
+	end
+	-- Use frame:RegisterEvent("eventName") during OnLoad
+}
+
+function onQuestComplete() {
+	-- Use frame:UnregisterEvent() or frame:UnregisterAllEvents()
+}
 
 function finishMonitoring
 -- callback to "finish" event
