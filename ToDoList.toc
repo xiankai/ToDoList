@@ -1,0 +1,6 @@
+## Interface: 50100
+## Title: ToDoList
+## Version: 0.0.1
+## Author: KJ
+## Notes: To-Do List tracker for dailies and regular time-based tasks.
+TDL.lua
